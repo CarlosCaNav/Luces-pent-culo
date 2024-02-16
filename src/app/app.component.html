@@ -1,20 +1,22 @@
 <h1> Trata de encender todas las luces. </h1>
 <div class="todas">
   <img class="pentaculo" src="assets/pentaculo.png">
-  <button class="boton uno" (click)="boton(1)"
+  <button class="boton uno" (click)="boton(0)"
     [ngClass]="{'': interruptores[0], 'apagado': !interruptores[0]}"></button>
-  <button class="boton dos" (click)="boton(2)"
+  <button class="boton dos" (click)="boton(1)"
     [ngClass]="{'': interruptores[1], 'apagado': !interruptores[1]}"></button>
-  <button class="boton tres" (click)="boton(3)"
+  <button class="boton tres" (click)="boton(2)"
     [ngClass]="{'': interruptores[2], 'apagado': !interruptores[2]}"></button>
-  <button class="boton cuatro" (click)="boton(4)"
+  <button class="boton cuatro" (click)="boton(3)"
     [ngClass]="{'': interruptores[3], 'apagado': !interruptores[3]}"></button>
-  <button class="boton cinco" (click)="boton(5)"
+  <button class="boton cinco" (click)="boton(4)"
     [ngClass]="{'': interruptores[4], 'apagado': !interruptores[4]}"></button>
 </div>
 
-<div *ngIf="this.interruptores[0] == true && this.interruptores[1] == true && this.interruptores[2] == true && 
-this.interruptores[3] == true && this.interruptores[4] == true" class="enhorabuena">
+<div *ngIf="this.interruptores[0] && this.interruptores[1] && this.interruptores[2] && 
+this.interruptores[3] && this.interruptores[4]" class="enhorabuena">
   <br> ¡¡¡¡Enhorabuena!!!! <br>
-  <button class="reiniciar" (click)="reiniciar()"> Reiniciar</button>
+  <div class="intentos">Lo has conseguido en {{intentos}} intentos.</div>
+  <button class="reiniciar" (click)="reiniciar('normal')"> Modo inicial</button>
+  <button class="reiniciar" (click)="reiniciar('aleatorio')"> Modo aleatorio</button>
 </div>
