@@ -4,8 +4,12 @@
     width: 450px;
     position: absolute;
     top: 20vh;
-    left: calc(50vw - 220px);
-    box-shadow: 0px 0px 200px 300px rgb(155, 211, 145), inset 0px 0px 50px 100px rgb(155, 211, 145);
+    left: calc(50vw - 960px / 2);/* 
+    box-shadow: 0px 0px 200px 300px rgb(155, 211, 145), inset 0px 0px 50px 100px rgb(155, 211, 145); */
+}
+
+.imagenes{
+    z-index: -1;
 }
 
 h1 {
@@ -27,14 +31,13 @@ h1 {
 
 .boton {
     position: absolute;
-    background-color: yellow;
-    box-shadow: 0px 0px 50px 20px yellow;
-    border-radius: 100%;
-    height: 50px;
-    width: 50px;
-}
+    background-color: rgba(255, 0, 0, 0);
+    border: none;
+    height: 200px;
+    width: 200px;
+    }
 
-
+/* 
 .boton:hover {
     box-shadow: 0px 0px 50px 25px yellow;
 }
@@ -43,13 +46,12 @@ h1 {
     background-color: rgb(92, 92, 29);
     box-shadow: 0px 0px 15px 5px yellow, inset -5px -5px 15px 10px rgb(31, 31, 31);
 }
-
+ */
 .apagado {
-    background-color: rgb(70, 70, 70);
-    box-shadow: 5px 5px 5px black, inset -5px -5px 15px 10px rgb(31, 31, 31);
-    border-radius: 100%;
+    background-color: rgba(255, 0, 0, 0);
+    border: none;
 }
-
+/* 
 .apagado:hover {
     box-shadow: 7px 7px 10px black, inset -5px -5px 15px 10px rgb(31, 31, 31);
 }
@@ -57,30 +59,31 @@ h1 {
 .apagado:active {
     background-color: rgb(92, 92, 29);
     box-shadow: 0px 0px 15px 5px yellow, inset -5px -5px 15px 10px rgb(31, 31, 31);
+} */
+
+
+.cero {
+    left: 385px;
 }
 
-
 .uno {
-    left: 200px;
+    top: 100px;
+    left: 180px;
 }
 
 .dos {
-    top: 145px
+    top: 100px;
+    left: 585px;
 }
 
 .tres {
-    top: 145px;
-    left: 400px;
+    top: 290px;
+    left: 250px;
 }
 
 .cuatro {
-    top: 380px;
-    left: 75px;
-}
-
-.cinco {
-    top: 380px;
-    left: 325px;
+    top: 290px;
+    left: 530px;
 }
 
 .enhorabuena {

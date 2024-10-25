@@ -1,15 +1,23 @@
 <h1> Trata de encender todas las luces. </h1>
 <div class="todas">
-  <img class="pentaculo" src="assets/pentaculo.png">
-  <button class="boton uno" (click)="boton(0)"
+  <img class="pentaculo" src="assets/3D/completo.jpg">
+
+  <img class="imagenes" *ngIf="interruptores[0] " class="pentaculo" src="assets/3D/0.png">
+  <img class="imagenes" *ngIf="interruptores[1] " class="pentaculo" src="assets/3D/1.png">
+  <img class="imagenes" *ngIf="interruptores[2] " class="pentaculo" src="assets/3D/2.png">
+  <img class="imagenes" *ngIf="interruptores[3] " class="pentaculo" src="assets/3D/3.png">
+  <img class="imagenes" *ngIf="interruptores[4] " class="pentaculo" src="assets/3D/4.png">
+
+
+  <button class="boton cero" (click)="boton(0)"
     [ngClass]="{'': interruptores[0], 'apagado': !interruptores[0]}"></button>
-  <button class="boton dos" (click)="boton(1)"
+  <button class="boton uno" (click)="boton(1)"
     [ngClass]="{'': interruptores[1], 'apagado': !interruptores[1]}"></button>
-  <button class="boton tres" (click)="boton(2)"
+  <button class="boton dos" (click)="boton(2)"
     [ngClass]="{'': interruptores[2], 'apagado': !interruptores[2]}"></button>
-  <button class="boton cuatro" (click)="boton(3)"
+  <button class="boton tres" (click)="boton(3)"
     [ngClass]="{'': interruptores[3], 'apagado': !interruptores[3]}"></button>
-  <button class="boton cinco" (click)="boton(4)"
+  <button class="boton cuatro" (click)="boton(4)"
     [ngClass]="{'': interruptores[4], 'apagado': !interruptores[4]}"></button>
 </div>
 

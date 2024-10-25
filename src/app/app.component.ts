@@ -22,6 +22,9 @@ export class AppComponent {
 
   boton(interruptor: number) {
 
+    console.log(interruptor);
+    
+
     const botones_a_cambiar = this.interruptores_cambiar[interruptor];
 
     botones_a_cambiar.forEach((interruptor) => {
