@@ -1,12 +1,13 @@
-<h1> Trata de encender todas las luces. </h1>
+<h1> Trata de encender todas las luces <br>
+  pulsando sobre las gárgolas. </h1>
 <div class="todas">
-  <img class="pentaculo" src="assets/3D/completo.jpg">
+  <img class="fondo" src="assets/3D/completo.jpg">
 
-  <img class="imagenes" *ngIf="interruptores[0] " class="pentaculo" src="assets/3D/0.png">
-  <img class="imagenes" *ngIf="interruptores[1] " class="pentaculo" src="assets/3D/1.png">
-  <img class="imagenes" *ngIf="interruptores[2] " class="pentaculo" src="assets/3D/2.png">
-  <img class="imagenes" *ngIf="interruptores[3] " class="pentaculo" src="assets/3D/3.png">
-  <img class="imagenes" *ngIf="interruptores[4] " class="pentaculo" src="assets/3D/4.png">
+  <img class="imagenes" [class.mostrar]="interruptores[0]" src="assets/3D/0.png">
+  <img class="imagenes" [class.mostrar]="interruptores[1]" src="assets/3D/1.png">
+  <img class="imagenes" [class.mostrar]="interruptores[2]" src="assets/3D/2.png">
+  <img class="imagenes" [class.mostrar]="interruptores[3]" src="assets/3D/3.png">
+  <img class="imagenes" [class.mostrar]="interruptores[4]" src="assets/3D/4.png">
 
 
   <button class="boton cero" (click)="boton(0)"
@@ -21,8 +22,7 @@
     [ngClass]="{'': interruptores[4], 'apagado': !interruptores[4]}"></button>
 </div>
 
-<div *ngIf="this.interruptores[0] && this.interruptores[1] && this.interruptores[2] && 
-this.interruptores[3] && this.interruptores[4]" class="enhorabuena">
+<div *ngIf="fin == true" class="enhorabuena">
   <br> ¡¡¡¡Enhorabuena!!!! <br>
   <div class="intentos">Lo has conseguido en {{intentos}} intentos.</div>
   <button class="reiniciar" (click)="reiniciaraleatorio(false)"> Modo inicial</button>
