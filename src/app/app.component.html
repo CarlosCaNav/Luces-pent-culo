@@ -9,12 +9,6 @@
   <img class="imagenes" [class.mostrar]="interruptores[3]" src="assets/3D/3.png">
   <img class="imagenes" [class.mostrar]="interruptores[4]" src="assets/3D/4.png">
 
-  <img class="imagenes" [class.mostrar]="interruptores[0]" src="assets/3D/0.png">
-  <img class="imagenes" [class.mostrar]="interruptores[1]" src="assets/3D/1.png">
-  <img class="imagenes" [class.mostrar]="interruptores[2]" src="assets/3D/2.png">
-  <img class="imagenes" [class.mostrar]="interruptores[3]" src="assets/3D/3.png">
-  <img class="imagenes" [class.mostrar]="interruptores[4]" src="assets/3D/4.png">
-
 
   <button class="boton cero" (click)="boton(0)"
     [ngClass]="{'': interruptores[0], 'apagado': !interruptores[0]}"></button>
@@ -33,4 +27,11 @@
   <div class="intentos">Lo has conseguido en {{intentos}} intentos.</div>
   <button class="reiniciar" (click)="reiniciaraleatorio(false)"> Modo inicial</button>
   <button class="reiniciar" (click)="reiniciaraleatorio(true)"> Modo aleatorio</button>
+</div>
+
+<div class="botones">
+  <button class="reiniciar" (click)="reiniciaraleatorio(false)">Reiniciar <br>(modo inicial)</button>
+  <a href="https://carloscanav.github.io">
+    <button class="reiniciar">Volver al portafolio</button>
+  </a>
 </div>

@@ -25,6 +25,12 @@
     z-index: -2;
 }
 
+.botones{
+    position: absolute;
+    top: calc(50vh + 300px);
+    left: calc(50vw - 160px);
+    }
+
 h1 {
     position: absolute;
     z-index: 1;
