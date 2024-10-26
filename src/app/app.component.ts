@@ -22,8 +22,22 @@ fin = false;
 
   intentos: number = 0;
 
+  ruido = new Audio('assets/ruido.ogg');
+  ruidoB = new Audio('assets/ruido.ogg');
+
   boton(interruptor: number) {
     const botones_a_cambiar = this.interruptores_cambiar[interruptor];
+
+    console.log(this.intentos % 2);
+    
+
+    //me pareció la manera más sencilla de reproducir dos audios a la vez
+    if(this.intentos % 2 === 0){ 
+      this.ruido.play();
+      console.log("A");
+      
+    }else{this.ruidoB.play();
+      console.log("B");} 
 
 
     this.interruptores[interruptor] = !this.interruptores[interruptor];
@@ -38,7 +52,7 @@ fin = false;
           this.fin = true
         }
     ;
-}, 100)
+}, 200)
 
 
     this.intentos++;

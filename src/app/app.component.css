@@ -12,7 +12,7 @@
     position: absolute;
     z-index: -1;
     opacity: 0;
-    transition: 0.2s;
+    transition: 1s;
 }
 
 .imagenes.mostrar {
@@ -107,7 +107,7 @@ h1 {
     background-color:rgb(12, 10, 7);
     border-radius: 20px;
     box-shadow: 10px 10px 50px black;
-    border: 3px solid black;
+    border: 3px solid wheat;
     position: absolute;
     top: 30vh;
     left: calc(50vw - 220px);
@@ -124,6 +124,10 @@ h1 {
     box-shadow: 5px 5px 10px;
     width: 152px;
     margin: 8px;
+}
+
+.reiniciar:hover{
+box-shadow: 0px 0px 10px wheat;
 }
 
 @media screen and (max-width: 800px) {
